@@ -1,12 +1,19 @@
 const Discord = require('discord.js');
 const dotenv = require('dotenv');
+const mongoose = require("mongoose");
 const { readdirSync } = require('fs');
 const { join } = require('path');
 
 dotenv.config();
 
+
+// Connecting to mongoose
+mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true });
+
+// Creating the client instance
 const client = new Discord.Client({
-    intents: ["GUILDS"]
+    intents: ["GUILDS", "GUILD_MESSAGE_REACTIONS"],
+    partials: ["REACTION", "MESSAGE"]
 });
 
 client.commands = new Discord.Collection();
