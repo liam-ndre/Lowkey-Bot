@@ -137,7 +137,7 @@ module.exports = {
                 errors: ["time"],
                 filter: (r, u) => u.id === interaction.user.id,
                 max: 1,
-                time: 30000000
+                time: 300000,
             }).catch(e => { })
 
             const emoji = reactions.first()?.emoji;
