@@ -28,8 +28,8 @@ module.exports = {
 
             if (reason === "time") content = "You are way too slow to click on the buttons, bruh";
             else if (reason === "1") content = "You clicked on the danger button";
-            else if (reason === "2") content = "You clicked on the secondary button";
-            else if (reason === "3") content = "You clicked on the primary button";
+            else if (reason === "2") content = "You clicked on the primary button";
+            else if (reason === "3") content = "You clicked on the second button";
             else if (reason === "4") content = "You clicked on the success button";
             else content = "You click on a unknown button";
 
