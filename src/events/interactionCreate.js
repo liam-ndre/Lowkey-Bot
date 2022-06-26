@@ -9,7 +9,7 @@ const { CommandInteraction } = require("discord.js");
 
 module.exports = (client, interaction) => {
     try{
-        if(!interaction.isCommand()) return;
+        if(!interaction.isCommand && !interaction.isContextMenu()) return;
 
         const command = client.commands.get(interaction.commandName), member = interaction.guild.members.cache.get(interaction.member.id);
 
