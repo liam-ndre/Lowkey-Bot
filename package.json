@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/liam-ndre/Lowkey-Bot#readme",
   "dependencies": {
+    "canvas": "^2.9.3",
     "discord-rock-paper-scissor": "^1.1.1",
     "discord.js": "^13.8.0",
     "dotenv": "^16.0.1",
